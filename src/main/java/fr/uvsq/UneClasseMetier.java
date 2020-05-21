@@ -4,8 +4,22 @@ import java.time.LocalDateTime;
 
 public class UneClasseMetier {
 
+    private AffichageMetier a;
+
+    UneClasseMetier() {
+        this.a = new AffichageMetier();
+    }
+
+    public AffichageMetier getA() {
+        return this.a;
+    }
+
+    public void setA(AffichageMetier a) {
+        this.a = a;
+    }
+
     public void uneMethodeMetier() {
-        System.out.println(LocalDateTime.now() + ": Début de uneMethodeMetier");
-        System.out.println(LocalDateTime.now() + ": Fin de uneMethodeMetier");
+        a.afficheDebut();
+        a.afficheFin();
     }
 }
